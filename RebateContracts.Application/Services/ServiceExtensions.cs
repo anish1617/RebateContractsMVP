@@ -13,6 +13,7 @@ public static class ServiceExtensions
     public static IServiceCollection AddRebateCalculationServices(this IServiceCollection services)
     {
         services.AddScoped<IPercentageRebateCalculatorService, PercentageRebateCalculatorService>();
+        services.AddScoped<IPercentageRebateEligibilityService, PercentageRebateEligibilityService>();
         services.AddScoped<IPerMtRebateCalculatorService, PerMtRebateCalculatorService>();
         services.AddScoped<ITieredRebateCalculatorService, TieredRebateCalculatorService>();
         services.AddScoped<IRatePayableRebateCalculatorService, RatePayableRebateCalculatorService>();

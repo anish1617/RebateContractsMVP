@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RebateContracts.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+33ab5767a3ff8891c8cbb241b5e4dc4d509395fc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c4b3404452cb9a409a5a4ebbc9605d889141ba89")]
 [assembly: System.Reflection.AssemblyProductAttribute("RebateContracts.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RebateContracts.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
