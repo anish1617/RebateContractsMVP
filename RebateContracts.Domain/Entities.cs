@@ -117,3 +117,18 @@ public class Sale
     public decimal Volume { get; set; }
     public decimal Price { get; set; }
 }
+
+public class PercentageRebateRule
+{
+    [Key]
+    public Guid Id { get; set; }
+    public Guid RebateContractId { get; set; }
+    public string Supplier { get; set; } = string.Empty;
+    public string GlobalCode { get; set; } = string.Empty;
+    public DateTime ValidFrom { get; set; }
+    public DateTime ValidTo { get; set; }
+    public decimal VolumeThreshold { get; set; }
+    public decimal? PriceThreshold { get; set; }
+    public decimal? MinShare { get; set; }
+    public decimal RebatePercent { get; set; }
+}

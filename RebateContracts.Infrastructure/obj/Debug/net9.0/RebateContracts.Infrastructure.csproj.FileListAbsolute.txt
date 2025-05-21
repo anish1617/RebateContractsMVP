@@ -9,3 +9,10 @@ D:\RebateContractsMVP\RebateContracts.Infrastructure\obj\Debug\net9.0\RebateCont
 D:\RebateContractsMVP\RebateContracts.Infrastructure\obj\Debug\net9.0\refint\RebateContracts.Infrastructure.dll
 D:\RebateContractsMVP\RebateContracts.Infrastructure\obj\Debug\net9.0\RebateContracts.Infrastructure.pdb
 D:\RebateContractsMVP\RebateContracts.Infrastructure\obj\Debug\net9.0\ref\RebateContracts.Infrastructure.dll
+D:\RebateContractsMVP\RebateContracts.Infrastructure\bin\Debug\net9.0\RebateContracts.Infrastructure.runtimeconfig.json
+D:\RebateContractsMVP\RebateContracts.Infrastructure\bin\Debug\net9.0\RebateContracts.Domain.dll
+D:\RebateContractsMVP\RebateContracts.Infrastructure\bin\Debug\net9.0\RebateContracts.Domain.pdb
+D:\RebateContractsMVP\RebateContracts.Infrastructure\obj\Debug\net9.0\RebateContracts.Infrastructure.csproj.AssemblyReference.cache
+D:\RebateContractsMVP\RebateContracts.Infrastructure\obj\Debug\net9.0\RebateContracts.Infrastructure.sourcelink.json
+D:\RebateContractsMVP\RebateContracts.Infrastructure\obj\Debug\net9.0\RebateCo.4AB63B93.Up2Date
+D:\RebateContractsMVP\RebateContracts.Infrastructure\obj\Debug\net9.0\RebateContracts.Infrastructure.genruntimeconfig.cache

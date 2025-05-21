@@ -9,3 +9,4 @@ D:\RebateContractsMVP\RebateContracts.Domain\obj\Debug\net9.0\RebateContracts.Do
 D:\RebateContractsMVP\RebateContracts.Domain\obj\Debug\net9.0\refint\RebateContracts.Domain.dll
 D:\RebateContractsMVP\RebateContracts.Domain\obj\Debug\net9.0\RebateContracts.Domain.pdb
 D:\RebateContractsMVP\RebateContracts.Domain\obj\Debug\net9.0\ref\RebateContracts.Domain.dll
+D:\RebateContractsMVP\RebateContracts.Domain\obj\Debug\net9.0\RebateContracts.Domain.sourcelink.json

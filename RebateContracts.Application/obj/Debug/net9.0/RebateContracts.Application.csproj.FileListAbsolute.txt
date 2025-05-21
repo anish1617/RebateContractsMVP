@@ -15,3 +15,4 @@ D:\RebateContractsMVP\RebateContracts.Application\obj\Debug\net9.0\RebateContrac
 D:\RebateContractsMVP\RebateContracts.Application\obj\Debug\net9.0\refint\RebateContracts.Application.dll
 D:\RebateContractsMVP\RebateContracts.Application\obj\Debug\net9.0\RebateContracts.Application.pdb
 D:\RebateContractsMVP\RebateContracts.Application\obj\Debug\net9.0\ref\RebateContracts.Application.dll
+D:\RebateContractsMVP\RebateContracts.Application\obj\Debug\net9.0\RebateContracts.Application.sourcelink.json
