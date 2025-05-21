@@ -47,6 +47,10 @@ Guide Copilot to generate a robust, maintainable .NET 9 Web MVC app called **Reb
   - Update DB: `dotnet ef database update`
 - **Seeding:**
   - Use `HasData` or custom scripts for seeding from CSVs
+- **SQL Server Specific:**
+  - For SQL Server, always specify decimal precision for all decimal properties in your models using Fluent API (`HasPrecision`) to avoid silent truncation and ensure data accuracy.
+  - Use `HasPrecision(18, 3)` for quantities, `HasPrecision(18, 4)` for prices, and `HasPrecision(8, 6)` for rates/percentages unless business rules require otherwise.
+  - Review and update `OnModelCreating` in your `DbContext` to enforce these settings for all relevant entities.
 
 ---
 
@@ -61,7 +65,7 @@ Guide Copilot to generate a robust, maintainable .NET 9 Web MVC app called **Reb
 ### **Testing Requirements**
 - **Write thorough unit tests for every piece of business logic**
 - **Test all calculation branches, edge cases, and contract types**
-- **Use xUnit and FluentAssertions**
+- **Use xUnit and xUnit's built-in Assert methods (not FluentAssertions)**
 - **Organize tests in a dedicated test project: `[ProjectName].Tests`**
 - **Adopt test-driven development (TDD) wherever possible**
 - **Include negative and boundary tests**
@@ -97,7 +101,10 @@ Guide Copilot to generate a robust, maintainable .NET 9 Web MVC app called **Reb
 ---
 
 ## 6. Additional Guidelines
-- **Dependency Injection:** Register services/repositories/DbContext with .NET DI in `Program.cs`
+- **Dependency Injection:** Register services/repositories/DbContext with .NET DI in `Program.cs`.
+- **Service Registration Best Practice:**
+  - Expose a static `ServiceExtensions` class in each layer (e.g., `RebateContracts.Application.Services.ServiceExtensions`) with an `Add[Feature]Services` method to register all services for that layer.
+  - In `Program.cs`, call these extension methods (e.g., `builder.Services.AddRebateCalculationServices()`) to keep DI registration clean and maintainable.
 - **Error Handling:** Implement global error handling; user-friendly error pages
 - **Logging:** Use `Microsoft.Extensions.Logging`
 - **Configuration:** Use `appsettings.json` and environment variables
@@ -163,7 +170,7 @@ dotnet run --project ./RebateContracts.Infrastructure/ -- import-csv "datas/Coun
 - Use PowerShell-compatible commands for terminal instructions
 - Write clear XML documentation on all public types/methods
 - Reference provided data for accurate modeling
-- **Write and maintain comprehensive unit tests for all business logic**
+- **Write and maintain comprehensive unit tests for all business logic using xUnit's Assert (not FluentAssertions)**
 
 **Don’t:**
 - Don’t put business logic in controllers or views
@@ -171,9 +178,15 @@ dotnet run --project ./RebateContracts.Infrastructure/ -- import-csv "datas/Coun
 - Don’t use records for entities that require EF Core features
 - Don’t mix data access code with business logic
 - Don’t hardcode configuration or secrets
+- **Don’t use FluentAssertions; use xUnit's Assert for all test assertions**
 - **Don’t skip writing unit tests for any service or logic**
 
 ---
 
 ## 10. Summary
 Build a robust, maintainable, and modern .NET 9 MVC web app for managing rebate contracts, implementing all business rules and relationships from provided data, and following best practices and conventions above. **Always generate and maintain thorough unit tests for all business logic and calculations.**
+
+## Razor Pages: Option Tag Selection
+- When generating <option> tags in Razor views that require a conditional selected attribute, always use the following syntax:
+  <option value="@c.Id" selected=@(Model.ContractId == c.Id ? "selected" : null)>@c.Name</option>
+- This ensures compatibility with Razor's parser and prevents build errors.

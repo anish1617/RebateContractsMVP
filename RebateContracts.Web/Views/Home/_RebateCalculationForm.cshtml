@@ -1,0 +1,83 @@
+@model RebateContracts.Web.Models.RebateCalculationViewModel
+@using RebateContracts.Domain.Entities
+@{
+    var error = Model?.Error;
+    var contracts = Model.Contracts!;
+    var products = Model.Products!;
+    var businessUnits = Model.BusinessUnits!;
+    var suppliers = Model.Suppliers!;
+}
+<form asp-action="Index" method="post" class="max-w-xl mx-auto mt-8 p-6 bg-card rounded shadow border border-border">
+    <h2 class="text-2xl font-bold mb-4 text-primary">Rebate Calculation</h2>
+    @if (!string.IsNullOrEmpty(error))
+    {
+        <div class="bg-error/10 text-error p-2 rounded mb-4">@error</div>
+    }
+    @Html.ValidationSummary(false, "", new { @class = "mb-4 text-error" })
+    <div class="mb-4">
+        <label asp-for="ContractId" class="block font-semibold text-secondary">Contract</label>
+        <select asp-for="ContractId" class="form-select w-full border border-border rounded px-3 py-2 focus:ring-primary focus:border-primary">
+            <option value="">Select contract...</option>
+            @foreach (var c in contracts)
+            {
+                <option value="@c.Id" selected=@(Model.ContractId == c.Id ? "selected" : null)>@c.Name</option>
+            }
+        </select>
+        <span asp-validation-for="ContractId" class="text-error"></span>
+    </div>
+    <div class="mb-4">
+        <label asp-for="ProductId" class="block font-semibold text-secondary">Product</label>
+        <select asp-for="ProductId" class="form-select w-full border border-border rounded px-3 py-2 focus:ring-primary focus:border-primary">
+            <option value="">Select product...</option>
+            @foreach (var p in products)
+            {
+                <option value="@p.Id" selected=@(Model.ProductId == p.Id ? "selected" : null)>@p.Name</option>
+            }
+        </select>
+        <span asp-validation-for="ProductId" class="text-error"></span>
+    </div>
+    <div class="mb-4">
+        <label asp-for="BusinessUnitId" class="block font-semibold text-secondary">Business Unit</label>
+        <select asp-for="BusinessUnitId" class="form-select w-full border border-border rounded px-3 py-2 focus:ring-primary focus:border-primary">
+            <option value="">Select business unit...</option>
+            @foreach (var bu in businessUnits)
+            {
+                <option value="@bu.Id" selected=@(Model.BusinessUnitId == bu.Id ? "selected" : null)>@bu.Name</option>
+            }
+        </select>
+        <span asp-validation-for="BusinessUnitId" class="text-error"></span>
+    </div>
+    <div class="mb-4">
+        <label asp-for="SupplierId" class="block font-semibold text-secondary">Supplier</label>
+        <select asp-for="SupplierId" class="form-select w-full border border-border rounded px-3 py-2 focus:ring-primary focus:border-primary">
+            <option value="">Select supplier...</option>
+            @foreach (var s in suppliers)
+            {
+                <option value="@s.Id" selected=@(Model.SupplierId == s.Id ? "selected" : null)>@s.Name</option>
+            }
+        </select>
+        <span asp-validation-for="SupplierId" class="text-error"></span>
+    </div>
+    <div class="mb-4">
+        <label asp-for="Date" class="block font-semibold text-secondary">Date</label>
+        <input asp-for="Date" type="date" class="form-input w-full border border-border rounded px-3 py-2 focus:ring-primary focus:border-primary" />
+        <span asp-validation-for="Date" class="text-error"></span>
+    </div>
+    <div class="mb-4">
+        <label asp-for="Volume" class="block font-semibold text-secondary">Volume (MT)</label>
+        <input asp-for="Volume" class="form-input w-full border border-border rounded px-3 py-2 focus:ring-primary focus:border-primary" />
+        <span asp-validation-for="Volume" class="text-error"></span>
+    </div>
+    <div class="mb-4">
+        <label asp-for="Price" class="block font-semibold text-secondary">Price</label>
+        <input asp-for="Price" class="form-input w-full border border-border rounded px-3 py-2 focus:ring-primary focus:border-primary" />
+        <span asp-validation-for="Price" class="text-error"></span>
+    </div>
+    <button type="submit" class="bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded font-semibold shadow transition">Calculate</button>
+    @if (Model?.CalculatedRebate != null)
+    {
+        <div class="mt-4 p-4 bg-success/10 text-success rounded border border-success">
+            <strong>Calculated Rebate:</strong> @Model.CalculatedRebate.Value.ToString("N2")
+        </div>
+    }
+</form>
