@@ -1,0 +1,11 @@
+D:\RebateContractsMVP\RebateContracts.Infrastructure\bin\Debug\net9.0\RebateContracts.Infrastructure.deps.json
+D:\RebateContractsMVP\RebateContracts.Infrastructure\bin\Debug\net9.0\RebateContracts.Infrastructure.dll
+D:\RebateContractsMVP\RebateContracts.Infrastructure\bin\Debug\net9.0\RebateContracts.Infrastructure.pdb
+D:\RebateContractsMVP\RebateContracts.Infrastructure\obj\Debug\net9.0\RebateContracts.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\RebateContractsMVP\RebateContracts.Infrastructure\obj\Debug\net9.0\RebateContracts.Infrastructure.AssemblyInfoInputs.cache
+D:\RebateContractsMVP\RebateContracts.Infrastructure\obj\Debug\net9.0\RebateContracts.Infrastructure.AssemblyInfo.cs
+D:\RebateContractsMVP\RebateContracts.Infrastructure\obj\Debug\net9.0\RebateContracts.Infrastructure.csproj.CoreCompileInputs.cache
+D:\RebateContractsMVP\RebateContracts.Infrastructure\obj\Debug\net9.0\RebateContracts.Infrastructure.dll
+D:\RebateContractsMVP\RebateContracts.Infrastructure\obj\Debug\net9.0\refint\RebateContracts.Infrastructure.dll
+D:\RebateContractsMVP\RebateContracts.Infrastructure\obj\Debug\net9.0\RebateContracts.Infrastructure.pdb
+D:\RebateContractsMVP\RebateContracts.Infrastructure\obj\Debug\net9.0\ref\RebateContracts.Infrastructure.dll

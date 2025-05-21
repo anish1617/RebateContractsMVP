@@ -1,0 +1,17 @@
+D:\RebateContractsMVP\RebateContracts.Application\bin\Debug\net9.0\RebateContracts.Application.deps.json
+D:\RebateContractsMVP\RebateContracts.Application\bin\Debug\net9.0\RebateContracts.Application.dll
+D:\RebateContractsMVP\RebateContracts.Application\bin\Debug\net9.0\RebateContracts.Application.pdb
+D:\RebateContractsMVP\RebateContracts.Application\bin\Debug\net9.0\RebateContracts.Domain.dll
+D:\RebateContractsMVP\RebateContracts.Application\bin\Debug\net9.0\RebateContracts.Infrastructure.dll
+D:\RebateContractsMVP\RebateContracts.Application\bin\Debug\net9.0\RebateContracts.Domain.pdb
+D:\RebateContractsMVP\RebateContracts.Application\bin\Debug\net9.0\RebateContracts.Infrastructure.pdb
+D:\RebateContractsMVP\RebateContracts.Application\obj\Debug\net9.0\RebateContracts.Application.csproj.AssemblyReference.cache
+D:\RebateContractsMVP\RebateContracts.Application\obj\Debug\net9.0\RebateContracts.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\RebateContractsMVP\RebateContracts.Application\obj\Debug\net9.0\RebateContracts.Application.AssemblyInfoInputs.cache
+D:\RebateContractsMVP\RebateContracts.Application\obj\Debug\net9.0\RebateContracts.Application.AssemblyInfo.cs
+D:\RebateContractsMVP\RebateContracts.Application\obj\Debug\net9.0\RebateContracts.Application.csproj.CoreCompileInputs.cache
+D:\RebateContractsMVP\RebateContracts.Application\obj\Debug\net9.0\RebateCo.1D4441DA.Up2Date
+D:\RebateContractsMVP\RebateContracts.Application\obj\Debug\net9.0\RebateContracts.Application.dll
+D:\RebateContractsMVP\RebateContracts.Application\obj\Debug\net9.0\refint\RebateContracts.Application.dll
+D:\RebateContractsMVP\RebateContracts.Application\obj\Debug\net9.0\RebateContracts.Application.pdb
+D:\RebateContractsMVP\RebateContracts.Application\obj\Debug\net9.0\ref\RebateContracts.Application.dll

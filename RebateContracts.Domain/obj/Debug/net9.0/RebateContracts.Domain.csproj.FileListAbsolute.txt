@@ -1,0 +1,11 @@
+D:\RebateContractsMVP\RebateContracts.Domain\bin\Debug\net9.0\RebateContracts.Domain.deps.json
+D:\RebateContractsMVP\RebateContracts.Domain\bin\Debug\net9.0\RebateContracts.Domain.dll
+D:\RebateContractsMVP\RebateContracts.Domain\bin\Debug\net9.0\RebateContracts.Domain.pdb
+D:\RebateContractsMVP\RebateContracts.Domain\obj\Debug\net9.0\RebateContracts.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\RebateContractsMVP\RebateContracts.Domain\obj\Debug\net9.0\RebateContracts.Domain.AssemblyInfoInputs.cache
+D:\RebateContractsMVP\RebateContracts.Domain\obj\Debug\net9.0\RebateContracts.Domain.AssemblyInfo.cs
+D:\RebateContractsMVP\RebateContracts.Domain\obj\Debug\net9.0\RebateContracts.Domain.csproj.CoreCompileInputs.cache
+D:\RebateContractsMVP\RebateContracts.Domain\obj\Debug\net9.0\RebateContracts.Domain.dll
+D:\RebateContractsMVP\RebateContracts.Domain\obj\Debug\net9.0\refint\RebateContracts.Domain.dll
+D:\RebateContractsMVP\RebateContracts.Domain\obj\Debug\net9.0\RebateContracts.Domain.pdb
+D:\RebateContractsMVP\RebateContracts.Domain\obj\Debug\net9.0\ref\RebateContracts.Domain.dll
