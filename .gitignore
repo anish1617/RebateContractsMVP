@@ -230,10 +230,6 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
-/CustomTemplate/node_modules
-/CustomTemplate/package-lock.json
-
-
 # Tailwind generated
 RebateContracts.Web/wwwroot/css/tailwind.generated.css
 
