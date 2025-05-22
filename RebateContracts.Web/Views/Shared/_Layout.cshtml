@@ -13,11 +13,14 @@
         <nav class="flex items-center justify-between px-6 py-4 bg-white border-b border-border shadow-sm">
             <div class="flex items-center gap-4">
                 <a class="text-primary font-bold text-xl" asp-area="" asp-controller="Home" asp-action="Index">RebateContracts.Web</a>
-            </div>
-            <div class="flex gap-4">
+            </div>            <div class="flex gap-4">
                 <a class="text-secondary hover:text-primary transition" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                 <a class="text-secondary hover:text-primary transition" asp-area="" asp-controller="Contracts" asp-action="Index">Contracts</a>
                 <a class="text-secondary hover:text-primary transition" asp-area="" asp-controller="GlobalDemand" asp-action="Index">Global Demand</a>
+                <a class="text-secondary hover:text-primary transition" asp-area="" asp-controller="CountryMapping" asp-action="Index">Country Mapping</a>
+                <a class="text-secondary hover:text-primary transition" asp-area="" asp-controller="ConcentrationConversion" asp-action="Index">Concentration Conversion</a>
+                <a class="text-secondary hover:text-primary transition" asp-area="" asp-controller="QuantityAdjustment" asp-action="Index">Quantity Adjustment</a>
+                <a class="text-secondary hover:text-primary transition font-semibold" asp-area="" asp-controller="ImportExport" asp-action="Index">Import/Export</a>
                 <a class="text-secondary hover:text-primary transition" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
             </div>
         </nav>
@@ -30,8 +33,12 @@
     <footer class="border-t border-border text-muted py-4 mt-8">
         <div class="container mx-auto px-4 text-center">
             &copy; 2025 - RebateContracts.Web - <a asp-area="" asp-controller="Home" asp-action="Privacy" class="text-secondary hover:text-primary">Privacy</a>
-        </div>
-    </footer>
+        </div>    </footer>
+    
+    <!-- Include modal partial -->
+    @await Html.PartialAsync("_ModalPartial")
+
     @await RenderSectionAsync("Scripts", required: false)
+    <script src="~/js/ui.js" asp-append-version="true"></script>
 </body>
 </html>

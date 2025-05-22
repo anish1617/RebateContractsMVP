@@ -1,0 +1,68 @@
+@{
+    ViewData["Title"] = "Data Import/Export";
+}
+
+<h1 class="text-2xl font-bold mb-6 text-primary">Data Import/Export Center</h1>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+    <!-- Import Card -->
+    <div class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-xl font-semibold mb-4 text-primary">Import Data</h2>
+        <p class="mb-4 text-sm text-gray-600">Upload CSV files to import data into the system</p>
+        
+        <a asp-action="Import" class="inline-block bg-primary text-white px-4 py-2 rounded hover:bg-primary-dark transition">
+            Go to Import
+        </a>
+    </div>
+    
+    <!-- Export Card -->
+    <div class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-xl font-semibold mb-4 text-primary">Export Data</h2>
+        <p class="mb-4 text-sm text-gray-600">Export data from the system in CSV format</p>
+        
+        <a asp-action="Export" class="inline-block bg-primary text-white px-4 py-2 rounded hover:bg-primary-dark transition">
+            Go to Export
+        </a>
+    </div>
+</div>
+
+<div class="bg-white p-6 rounded-lg shadow-md">
+    <h2 class="text-xl font-semibold mb-4 text-primary">Import/Export Guidelines</h2>
+    
+    <div class="space-y-4 text-sm">
+        <div>
+            <h3 class="font-semibold text-gray-800">CSV Format Requirements:</h3>
+            <ul class="list-disc ml-6 mt-2 text-gray-600">
+                <li>Files must be in CSV format with proper headers</li>
+                <li>Date fields should be in ISO format (YYYY-MM-DD)</li>
+                <li>IDs should be valid GUIDs for updates, or left empty for new records</li>
+                <li>Required fields must not be empty</li>
+            </ul>
+        </div>
+        
+        <div>
+            <h3 class="font-semibold text-gray-800">Supported Data Types:</h3>
+            <ul class="list-disc ml-6 mt-2 text-gray-600">
+                <li><strong>Contracts:</strong> Basic contract information including contract type, dates, and names</li>
+                <li><strong>Tiered Ranges:</strong> Volume tier ranges and rebate rates for tiered rebate calculations</li>
+                <li><strong>Country Mappings:</strong> Business unit to country code mappings</li>
+                <li><strong>Concentration Conversions:</strong> Global code conversion factors</li>
+                <li><strong>Quantity Adjustments:</strong> Product-specific quantity adjustment factors</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Show toast notification if available
+        if ('@TempData["Toast"]') {
+            showToast('@TempData["Toast"]');
+        }
+        
+        // Show error notification if available
+        if ('@TempData["Error"]') {
+            showToast('@TempData["Error"]', 'error');
+        }
+    </script>
+}

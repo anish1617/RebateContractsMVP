@@ -1,0 +1,38 @@
+@model RebateContracts.Web.Models.CountryMappingViewModel
+@{
+    ViewData["Title"] = Model.Id == Guid.Empty ? "Create Country Mapping" : "Edit Country Mapping";
+    var isEdit = Model.Id != Guid.Empty;
+}
+
+<h1 class="text-2xl font-bold mb-6 text-primary">@ViewData["Title"]</h1>
+
+<form asp-action="@(isEdit ? "Edit" : "Create")" method="post" class="space-y-6 max-w-xl bg-white p-6 rounded shadow">
+    @if (isEdit)
+    {
+        <input type="hidden" asp-for="Id" />
+    }
+    <div>
+        <label asp-for="RebateContract" class="block mb-1 font-medium">Rebate Contract</label>
+        <input asp-for="RebateContract" class="form-input w-full border border-border rounded px-3 py-2 focus:border-primary focus:ring-primary" required />
+        <span asp-validation-for="RebateContract" class="text-error text-sm"></span>
+    </div>
+    <div>
+        <label asp-for="BusinessUnitName" class="block mb-1 font-medium">Business Unit</label>
+        <input asp-for="BusinessUnitName" class="form-input w-full border border-border rounded px-3 py-2 focus:border-primary focus:ring-primary" required />
+        <span asp-validation-for="BusinessUnitName" class="text-error text-sm"></span>
+    </div>
+    <div>
+        <button type="submit" class="bg-primary text-white px-6 py-2 rounded hover:bg-primary-dark transition">@(isEdit ? "Save" : "Create")</button>
+        <a asp-action="Index" class="ml-2 text-secondary hover:underline">Cancel</a>
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        // Show toast notification if available
+        if ('@TempData["Toast"]') {
+            showToast('@TempData["Toast"]');
+        }
+    </script>
+}

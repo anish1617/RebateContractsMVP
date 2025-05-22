@@ -1,0 +1,52 @@
+@model IEnumerable<RebateContracts.Web.Models.CountryMappingViewModel>
+@{
+    ViewData["Title"] = "Country Mapping Overview";
+}
+
+<h1 class="text-2xl font-bold mb-6 text-primary">Country Mapping Overview</h1>
+
+<div class="mb-4 flex justify-between items-center">
+    <a asp-action="Create" class="bg-primary text-white px-4 py-2 rounded hover:bg-primary-dark transition">New Country Mapping</a>
+    <span class="text-sm text-muted">@Model?.Count() ?? 0 records</span>
+</div>
+
+<table class="min-w-full bg-white border border-border rounded shadow text-sm">
+    <thead>
+        <tr class="bg-gray-100">
+            <th class="px-4 py-2 text-left">Rebate Contract</th>
+            <th class="px-4 py-2 text-left">Business Unit</th>
+            <th class="px-4 py-2">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Any())
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td class="px-4 py-2">@item.RebateContract</td>
+                    <td class="px-4 py-2">@item.BusinessUnitName</td>
+                    <td class="px-4 py-2 flex gap-2">
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="text-blue-600 hover:underline">Edit</a>
+                        <form asp-action="Delete" asp-route-id="@item.Id" method="post" class="inline">
+                            <button type="submit" class="text-red-600 hover:underline">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr><td colspan="3" class="px-4 py-2 text-center text-muted">No country mappings found.</td></tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+    <script>
+        // Show toast notification if available
+        if ('@TempData["Toast"]') {
+            showToast('@TempData["Toast"]');
+        }
+    </script>
+}

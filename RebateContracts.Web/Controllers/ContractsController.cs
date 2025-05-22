@@ -62,4 +62,37 @@ public class ContractsController : Controller
         await Task.CompletedTask;
         return RedirectToAction(nameof(Index));
     }
+
+    public IActionResult Copy(Guid id)
+    {
+        // TODO: Fetch contract, duplicate, and return pre-filled Create view
+        // var contract = _contractService.GetById(id);
+        // var copy = new ContractViewModel { ...copy fields... };
+        // return View("Create", copy);
+        return RedirectToAction("Create");
+    }
+
+    public IActionResult ImportExport()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Import(IFormFile file)
+    {
+        // TODO: Parse and import contracts from CSV/Excel
+        // await _contractService.ImportAsync(file);
+        await Task.CompletedTask;
+        TempData["Toast"] = "Contracts imported successfully.";
+        return RedirectToAction("Index");
+    }
+
+    public async Task<IActionResult> Export()
+    {
+        // TODO: Export contracts to CSV/Excel
+        // var file = await _contractService.ExportAsync();
+        // return File(file.Content, file.ContentType, file.FileName);
+        return RedirectToAction("Index");
+    }
 }
